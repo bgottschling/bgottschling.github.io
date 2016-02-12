@@ -17,6 +17,7 @@ function getWeather(lat, lon) {
 
   $.ajax({
   	url: apiURI,
+    dataType: "json",
     type: "GET",
     success: function(resp) {
       console.log("made it");
