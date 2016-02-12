@@ -30,15 +30,14 @@ function getWeather(lat, lon) {
       return false;
     }
   });
-  return jsonResp
+  console.log(jsonResp);
  }
 
 var jsonStr = "";
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
-   jsonStr = getWeather(position.coords.latitude, position.coords.longitude);
-   console.log(jsonStr);
-   alert(jsonStr);
+   getWeather(position.coords.latitude, position.coords.longitude);
+
   })
 } else {
 alert ("geolocation not available");
