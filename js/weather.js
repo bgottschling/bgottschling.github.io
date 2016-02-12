@@ -14,7 +14,7 @@ function getWeather(lat, lon) {
   obj = xhr.response;
 
   console.log(obj);*/
-
+    var jsonResp = "";
   $.ajax({
   	url: apiURI,
     dataType: "json",
@@ -22,7 +22,7 @@ function getWeather(lat, lon) {
     success: function(resp) {
       console.log("made it");
       console.log(resp);
-    	console.log(JSON.stringify(resp));
+    	jsonResp = JSON.stringify(resp);
     },
     error: function(error) {
       console.log("an error has occurred")
@@ -30,13 +30,15 @@ function getWeather(lat, lon) {
       return false;
     }
   });
+  return jsonResp
  }
 
-
+var jsonStr = "";
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
-    getWeather(position.coords.latitude, position.coords.longitude);
-
+   jsonStr = getWeather(position.coords.latitude, position.coords.longitude);
+   console.log(jsonStr);
+   alert(jsonStr);
   })
 } else {
 alert ("geolocation not available");
