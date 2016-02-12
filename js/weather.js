@@ -21,7 +21,8 @@ function getWeather(lat, lon) {
     type: "GET",
     success: function(resp) {
       console.log("made it");
-    	return JSON.stringify(resp);
+      console.log(resp);
+    	console.log(JSON.stringify(resp));
     },
     error: function(error) {
       console.log("an error has occurred")
@@ -31,12 +32,11 @@ function getWeather(lat, lon) {
   });
  }
 
-var strJson = "";
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
-    strJson = getWeather(position.coords.latitude, position.coords.longitude);
-    alert(strJson);
+    getWeather(position.coords.latitude, position.coords.longitude);
+
   })
 } else {
 alert ("geolocation not available");
