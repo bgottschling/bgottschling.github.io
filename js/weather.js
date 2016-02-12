@@ -4,7 +4,18 @@
 function getWeather(lat, lon) {
 	
   var apiURI = "api.openweathermap.org/data/2.5/weather?lat="+ lat +"&lon="+ lon +"&appid=06170c100199dbae1e223cc3dfad960b";
-  $.ajax({
+  var obj;
+  var xhr = new XMLHttpRequest();
+
+  xhr.open("GET", apiURI, true);
+  xhr.setRequestHeader('Content-Type', 'text/json');
+  xhr.send();
+
+  obj = xhr.response;
+
+  console.log(obj);
+
+ /* $.ajax({
   	url: apiURI,
     type: "GET",
     success: function(resp) {
@@ -15,7 +26,7 @@ function getWeather(lat, lon) {
       console.log("an error has occurred")
     	alert(error);
     }
-  });
+  });*/
  }
 
 if ("geolocation" in navigator) {
