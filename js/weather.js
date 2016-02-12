@@ -20,18 +20,22 @@ function getWeather(lat, lon) {
     type: "GET",
     success: function(resp) {
       console.log("made it");
-    	alert(resp);
+    	return JSON.stringify(resp);
     },
     error: function(error) {
       console.log("an error has occurred")
     	alert(error);
+      return false;
     }
   });
  }
 
+var strJson = "";
+
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
-    getWeather(position.coords.latitude, position.coords.longitude);
+    strJson = getWeather(position.coords.latitude, position.coords.longitude);
+    alert(strJson);
   })
 } else {
 alert ("geolocation not available");
