@@ -3,190 +3,159 @@
   <head>
     <meta charset="UTF-8">
     <title>Brandon Gottschling's Portfolio</title>
-    
-    
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type='text/css'>
+
+    <!-- Font MFizz -->
+    <link rel="stylesheet" href="http://cdn.ovispot.com/c/font-mfizz/1.2/font-mfizz.css" type='text/css'>
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
-
-        <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+  
   </head>
 
-  <body>
+    <body>
+      <div class="container-fluid all">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#1">Brandon Gottschling</a>
+            </div>
 
-    <!DOCTYPE html>
-<html>
-
-<head>
-  <title>Brandon Gottschling</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap -->
-  <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css" rel="stylesheet">
-  <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-  <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type='text/css'>
-
-  <!-- Font MFizz -->
-  <link rel="stylesheet" href="http://cdn.ovispot.com/c/font-mfizz/1.2/font-mfizz.css" type='text/css'>
-
-  <!-- custom CSS -->
-  <!--<link href="css/custom.css" rel="stylesheet" type='text/css'>-->
-</head>
-
-<body>
-  <div class="container-fluid all">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle Navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#1">Brandon Gottschling</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li id="home"><a href="#1"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li id="about"><a href="#2"><i class="fa fa-info-circle nav-icon"></i>
-            About</a></li>
-            <li id="portfolio"><a href="#3"><i class="fa fa-folder-open nav-icon"></i>
-            Portfolio</a></li>
-            <li id="contact"><a href="#4"><i class="fa fa-envelope nav-icon"></i>
-            Contact</a></li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
-    <br/>
-    <div class="row">
-      <div class="jumbotron home" id="1">
-        <img class="image-border img-responsive text-center" src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/facebrandon_zpsdsvir6wl.jpg" alt="Brandon Gottschling in a sweater!">
-        <h2 class="text-center">Brandon Gottschling				</h2>
-        <h3 class="text-center">Full Stack Developer</h3>
-        <h4 class="text-center">Atlanta, Georgia</4>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="container well about" id="2">
-        <h2 class="text-center title-text">About Me</h2>
-        <p class="">
-          I am very passionate about technology and how it advances us as a civilization. Currently in my career I am employed as a Product Specialist supporting a content management system at <a href="http://www.vertafore.com/">Vertafore</a>, an insurance
-          software company. I have life long aspirations to become a software developer. I currently use <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> and other JS frameworks like <strong>Bootstrap</strong>, <strong>JQuery</strong>,
-          <strong>AngularJS</strong>, <strong>ExpressJS</strong>, and <strong>NodeJS</strong>. I also have experience with <strong>MongoDB</strong>, and <strong>T-SQL</strong>. What interests me the most about the JavaScript language is that it allows
-          you to develop front and back-end applications all using one language. I find the MEAN stack, as they call it, practical due to the fact that you are not flipping between different languages. Not to mention its leverage of HTTP for scalability,
-          availability, and versatility. What I mean by this is that you can develop robust applications with next to no footprint, readily available wherever there is an internet connection and a web browser. To me, something about that seems powerful.
-        </p>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="container well portfolio" id="3">
-        <h2 class= "text-center title-text">Portfolio</h2>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li id="home"><a href="#1"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li id="about"><a href="#2"><i class="fa fa-info-circle nav-icon"></i>
+                About</a></li>
+                <li id="portfolio"><a href="#3"><i class="fa fa-folder-open nav-icon"></i>
+                Portfolio</a></li>
+                <li id="contact"><a href="#4"><i class="fa fa-envelope nav-icon"></i>
+                Contact</a></li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+        <br/>
         <div class="row">
-          <div class="col-md-4">
-            <a href="http://codepen.io/brandon-gottschling/full/XmLvmo/" class="thumbnail" target="_blank">
-              <img src="http://i1382.photobucket.com/albums/ah271/Brandon_Gottschling/thumbnail1_zpsdbbhlko6.png" alt="" class="img-thumbnail">
-              <div class="caption">
-                <p>Quote-O-Matic</p>
-              </div>
-            </a>
+          <div class="jumbotron home" id="1">
+            <img class="image-border img-responsive text-center" src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/facebrandon_zpsdsvir6wl.jpg" alt="Brandon Gottschling in a sweater!">
+            <h2 class="text-center">Brandon Gottschling				</h2>
+            <h3 class="text-center">Full Stack Developer</h3>
+            <h4 class="text-center">Atlanta, Georgia</4>
+
           </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
-              <div class="caption">
-                <p>Project #2</p>
-              </div>
-            </a>
+        </div>
+        <div class="row">
+          <div class="container well about" id="2">
+            <h2 class="text-center title-text">About Me</h2>
+            <p class="">
+              I am very passionate about technology and how it advances us as a civilization. Currently in my career I am employed as a Product Specialist supporting a content management system at <a href="http://www.vertafore.com/">Vertafore</a>, an insurance
+              software company. I have life long aspirations to become a software developer. I currently use <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> and other JS frameworks like <strong>Bootstrap</strong>, <strong>JQuery</strong>,
+              <strong>AngularJS</strong>, <strong>ExpressJS</strong>, and <strong>NodeJS</strong>. I also have experience with <strong>MongoDB</strong>, and <strong>T-SQL</strong>. What interests me the most about the JavaScript language is that it allows
+              you to develop front and back-end applications all using one language. I find the MEAN stack, as they call it, practical due to the fact that you are not flipping between different languages. Not to mention its leverage of HTTP for scalability,
+              availability, and versatility. What I mean by this is that you can develop robust applications with next to no footprint, readily available wherever there is an internet connection and a web browser. To me, something about that seems powerful.
+            </p>
+
           </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
-              <div class="caption">
-                <p>Project #3</p>
+        </div>
+        <div class="row">
+          <div class="container well portfolio" id="3">
+            <h2 class= "text-center title-text">Portfolio</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <a href="http://codepen.io/brandon-gottschling/full/XmLvmo/" class="thumbnail" target="_blank">
+                  <img src="http://i1382.photobucket.com/albums/ah271/Brandon_Gottschling/thumbnail1_zpsdbbhlko6.png" alt="" class="img-thumbnail">
+                  <div class="caption">
+                    <p>Quote-O-Matic</p>
+                  </div>
+                </a>
               </div>
-            </a>
+              <div class="col-md-4">
+                <a href="#" class="thumbnail">
+                  <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
+                  <div class="caption">
+                    <p>Project #2</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="thumbnail">
+                  <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
+                  <div class="caption">
+                    <p>Project #3</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="thumbnail">
+                  <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
+                  <div class="caption">
+                    <p>Project #4</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="thumbnail">
+                  <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
+                  <div class="caption">
+                    <p>Project #5</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="thumbnail">
+                  <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
+                  <div class="caption">
+                    <p>Porject #6</p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
-              <div class="caption">
-                <p>Project #4</p>
+          <div class="row">
+            <div class="container well contact" id="4">
+             <div class= "title-text text-center"> 
+              <h2>Contact Me</h2>
+              <h4>Let My Passion Be Your Product</h4>
+             </div>
+            <div class="row social_buttons">
+              <div class="col-sm-offset-1 col-md-2 text-center linkedin">
+                <a href="https://www.linkedin.com/in/bgottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
               </div>
-            </a>
+              <div class="col-md-2 text-center">
+                <a href="https://github.com/bgottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-github"></i> Github</a>
+              </div>
+              <div class="col-md-3 text-center">
+                <a href="http://www.freecodecamp.com/bgottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-fire"></i> freeCodeCamp</a>
+              </div>
+              <div class="col-md-2 text-ceneter">
+                <a href="http://codepen.io/brandon-gottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-codepen"></i> Codepen</a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
-              <div class="caption">
-                <p>Project #5</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="http://i1382.photobucket.com/albums/ah249/alyssa_marie21/iph_zpsrzdkhjpj.jpg" alt="" class="img-thumbnail">
-              <div class="caption">
-                <p>Porject #6</p>
-              </div>
-            </a>
+        </div>
+        <div class="footer">
+          <div class="container">
+            <p class="">Copyright © Brandon Gottschling 2015. All Rights Reserved</p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="container well contact" id="4">
-         <div class= "title-text text-center"> 
-          <h2>Contact Me</h2>
-          <h4>Let My Passion Be Your Product</h4>
-         </div>
-        <div class="row social_buttons">
-          <div class="col-sm-offset-1 col-md-2 text-center linkedin">
-            <a href="https://www.linkedin.com/in/bgottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
-          </div>
-          <div class="col-md-2 text-center">
-            <a href="https://github.com/bgottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-github"></i> Github</a>
-          </div>
-          <div class="col-md-3 text-center">
-            <a href="http://www.freecodecamp.com/bgottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-fire"></i> freeCodeCamp</a>
-          </div>
-          <div class="col-md-2 text-ceneter">
-            <a href="http://codepen.io/brandon-gottschling" class="btn btn-default btn-lg center-block" role="button" target="_blank"><i class="fa fa-codepen"></i> Codepen</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <p class="">Copyright © Brandon Gottschling 2015. All Rights Reserved</p>
-      </div>
-    </div>
-  </div>
-</body>
 
-</html>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-    
-    
-    
-  </body>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+      <script src="js/index.js"></script>
+    </body>
 </html>
