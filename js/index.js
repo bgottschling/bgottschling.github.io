@@ -1,56 +1,25 @@
 $(document).ready(
-  
-  $(".navbar-right li").hover(
-    function() {
-      if (!$(this).hasClass('animated')) {
-        $(this).dequeue().stop().animate({
-          width: "120px"
-        });
+   $(".navbar-right li").on("mouseenter", 
+      function() {
+        //console.log($("#"+ $(this).attr("id")));
+        if (!$(this).hasClass('animated') && !$("#"+ $(this).attr("id")).hasClass("animated")) {
+          $(this).stop("fx",true).velocity({
+            width: "120px"
+          });
+
+           $("."+ $(this).attr("id")).dequeue("fx").stop("fx").addClass("animated bounce");
+        } 
+      }),
+  $(".navbar-right li").on("mouseleave",
+      function() {
+           $(this).dequeue("fx").stop("fx").addClass('animated').velocity({
+            width: "103px"
+          }, "normal", "linear",
+          function() {
+            $("."+ $(this).attr("id")).dequeue("fx").removeClass("animated bounce");
+            $(this).dequeue("fx").removeClass('animated').stop("fx",true);
+          }
+        );
       }
-    },
-    function() {
-      $(this).addClass('animated').animate({
-          width: "103px"
-        }, "normal", "linear",
-        function() {
-          $(this).removeClass('animated').dequeue();
-        }
-      );
-    }
-  ),
-
-  $("#home").hover(
-    function() {
-      $(".home").addClass("animated bounce");
-    },
-
-    function() {
-      $(".home").removeClass("animated bounce");
-    }),
-
-  $("#about").hover(
-    function() {
-      $(".about").addClass("animated bounce");
-    },
-
-    function() {
-      $(".about").removeClass("animated bounce");
-    }),
-
-  $("#portfolio").hover(
-    function() {
-      $(".portfolio").addClass("animated bounce");
-    },
-
-    function() {
-      $(".portfolio").removeClass("animated bounce");
-    }),
-  $("#contact").hover(
-    function() {
-      $(".contact").addClass("animated bounce");
-    },
-
-    function() {
-      $(".contact").removeClass("animated bounce");
-    })
+   )
 );
