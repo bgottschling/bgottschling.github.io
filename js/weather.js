@@ -1,5 +1,7 @@
 var tempMode = 1;
 
+
+
 function getWeather(lat, lon) {
   var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
 
@@ -45,6 +47,7 @@ function getWeather(lat, lon) {
     },
     error: function(resp) {
        alert("Error: " + e);
+       clearInterval(updateinter);
     }
   });
 }
@@ -56,8 +59,19 @@ function getLocation() {
     })
   } else {
     alert("geolocation not available" + e);
+    clearInterval(updateinter);
   }
 }
+
+var updateinter = setInterval(function(){
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      getWeather(position.coords.latitude, position.coords.longitude);
+    })
+  } else {
+    alert("geolocation not available" + e);
+  }
+}, 20000);
 
   
 getLocation();
