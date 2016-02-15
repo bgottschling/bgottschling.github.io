@@ -71,7 +71,7 @@ var updateinter = setInterval(function(){
   } else {
     alert("geolocation not available" + e);
   }
-}, 60000);
+}, 300000);
 
   
 getLocation();
