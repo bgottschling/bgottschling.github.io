@@ -20,7 +20,7 @@ function getWeather(lat, lon) {
       console.log(apiURI);
       console.log(resp.name);
       if (resp.name) {
-        $("#city-text").html(resp.name);
+        $("#city-text").html(resp.name + ", " + resp.sys.country);
       }
       if (resp.wind) {
         var knots = resp.wind.speed * 1.9438445;
