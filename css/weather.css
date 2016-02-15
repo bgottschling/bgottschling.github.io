@@ -1,0 +1,16 @@
+body{
+  background-color: #393276;
+}
+
+.data-item{
+  color: #444;
+}
+
+.jumbotron, .well{
+  background: #888;
+  color: white;
+}
+
+.copyright{
+  color: #222;
+}

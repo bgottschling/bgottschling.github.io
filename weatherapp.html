@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html >
-    <head>
-        <meta charset="UTF-8">
-        <title>Brandon Gottschling's Portfolio</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+      
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/weather.css">    
+    
+  </head>
 
-            <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type='text/css'>
+  <body>
 
-            <!-- Font MFizz -->
-        <link rel="stylesheet" href="http://cdn.ovispot.com/c/font-mfizz/1.2/font-mfizz.css" type='text/css'>
-        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-        <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
-        <link rel="stylesheet" href="css/style.css">    
-    </head>
-    <body>
-        <div class="container-fluid all">
-            <div class="jumbotron main">
-                <h1 class="text-center">Local Weather</h1>
-                <div class="row">
-                    <div class="col-md-4 well">
-                    </div>
-                    <div class="col-md-4 well">
-                    </div>
-                    <div class="col-md-4 well">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid all">
+  <div class="jumbotron">
+    <h1 class="text-center">Weather App</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12 well" id="city">
+      <h2 class="text-center">Weather for</h2>
+      <h2 class="text-center data-item" id="city-text"></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 well" id="weather">
+      <img src="" id="weatherImg" class="center-block">
+      <h3 class="text-center data-item" id="weather-text"></h3>
+    </div>
+    <div class="col-md-4 well" id="temp">
+      <h3 class="text-center">Temperature</h3>
+      <h3 class="text-center data-item" id="temp-text"></h3>
+      <div class="checkbox text-center">
+        <label><input type="checkbox" id="tempMode" value="2">
+          C&deg
+        </label>
+      </div>
+    </div>
+    <div class="col-md-4 well" id="wind">
+      <h3 class="text-center">Wind Speed</h3>
+      <h3 class="text-center data-item" id="wind-text"></h3>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <p class="copyright">Copyright © Brandon Gottschling 2016. All Rights Reserved. Made with</p>
+    </div>
+  </div>
+</div>
 
-        <!--JQuery & Bootstrap-->
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-        <script src="js/weather.js"></script>
-    </body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src="js/weather.js"></script>
+
+  </body>
 </html>
