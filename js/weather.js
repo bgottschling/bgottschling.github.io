@@ -64,6 +64,9 @@ function getLocation() {
 }
 
 var updateinter = setInterval(function(){
+  var i = 0;
+
+  console.log("iteration# " + i++);
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
       getWeather(position.coords.latitude, position.coords.longitude);
