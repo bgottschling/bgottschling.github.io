@@ -21,7 +21,7 @@ function getWeather(lat, lon) {
       });
       console.log(apiURI);
       console.log(resp.name);
-      if (resp.name) {
+      if (resp.name && resp.sys) {
         $("#city-text").html(resp.name + ", " + resp.sys.country);
       }
       if (resp.wind) {
@@ -46,7 +46,7 @@ function getWeather(lat, lon) {
       }   
     },
     error: function(resp) {
-       alert("Error: " + e);
+       alert("Error occurred retrieving API response see console.");
        clearInterval(updateinter);
     }
   });
@@ -69,6 +69,7 @@ var updateinter = setInterval(function(){
     navigator.geolocation.getCurrentPosition(function(position) {
       getWeather(position.coords.latitude, position.coords.longitude);
     })
+    clearInterval(updateinter);
   } else {
     alert("geolocation not available" + e);
   }
