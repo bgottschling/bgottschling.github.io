@@ -11,11 +11,10 @@ function getWeather(lat, lon) {
     type: "GET",
     async: "false",
     success: function(resp) {
-
-      $("#tempMode").on("click", function() {
+      $("#tempMode").off("click").on("click", function() {
         if (this.checked) {
           $("#temp-text").html(cels.toFixed(1) + " C&deg");
-          console.log("checked");
+            console.log("checked");
         } else
           $("#temp-text").html(fahr.toFixed(0) + " F&deg");
       });
@@ -69,7 +68,6 @@ var updateinter = setInterval(function(){
     navigator.geolocation.getCurrentPosition(function(position) {
       getWeather(position.coords.latitude, position.coords.longitude);
     })
-    clearInterval(updateinter);
   } else {
     alert("geolocation not available" + e);
   }
