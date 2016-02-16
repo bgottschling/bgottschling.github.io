@@ -62,10 +62,8 @@ function getLocation() {
     clearInterval(updateinter);
   }
 }
-
+var i = 0;
 var updateinter = setInterval(function(){
-  var i = 0;
-
   console.log("iteration# " + i++);
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
