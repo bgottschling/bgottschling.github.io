@@ -3,16 +3,26 @@ var $tempMode = $("#tempMode");
 var $tempText = $("#temp-text");
 var $windText = $("#wind-text");
 //$(document).ready(function() {
-  // this function takes the temperature from the dataHandler and displays the temperature according to the correct temperature unit, and colors the temperature hot or cold.
+  
+//function for instruction dialog
+  $(function() {
+    $( "#dialog" ).dialog();
+  });
 
+  // this function takes the temperature from the dataHandler and displays the temperature according to the correct temperature unit, and colors the temperature hot or cold.
   function formatTemperature(kelvin) {
+    
+    
     var clicked = false;
     var fahr = ((kelvin * 9 / 5) - 459.67).toFixed(0);
     var cels = (kelvin - 273.15).toFixed(1);
     //initial temperature display
     $tempText.html(fahr);
+
+    var firstClick = false;
     //click handler to update the temperature unit of measurement.
     $tempMode.off("click").on("click", function() {
+      firstClick = true;
       console.log(clicked);
       clicked === false ? clicked = true : clicked = false;
       clicked === true ? $tempMode.html("C&deg") : $tempMode.html("F&deg");
