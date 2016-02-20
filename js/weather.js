@@ -2,7 +2,7 @@
 var $tempMode = $("#tempMode");
 var $tempText = $("#temp-text");
 var $windText = $("#wind-text");
-$(document).ready(function() {
+//$(document).ready(function() {
   // this function takes the temperature from the dataHandler and displays the temperature according to the correct temperature unit, and colors the temperature hot or cold.
 
   function formatTemperature(kelvin) {
@@ -75,4 +75,4 @@ $(document).ready(function() {
     }
   }
   var updateInterval = setInterval(getLocation(), 300000);
-});
+//});
