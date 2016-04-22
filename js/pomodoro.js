@@ -36,7 +36,6 @@ $(document).ready(
       }
       pomodoro.breakCount = 0;
       timer(pomodoro.wTime);
-      console.log(inter);
     });
 
     $("#stop").click(function() {
