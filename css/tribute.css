@@ -1,0 +1,42 @@
+.banner {
+  width:100%;
+  height: 25%;
+  background-color: #876;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.portrait {
+  border-radius: 30% 30% 5% 30%;
+  margin-top: 1.5%;
+  height:50%;
+}
+
+.about {
+  height: 25%;
+  width: 100%;
+  background-color: #778;
+  color: #BBB;
+}
+
+.text-box {
+  margin: 5% 13%;
+  
+}
+
+.intro-text {
+  color: #FFF;
+  font-size: 16px;
+}
+
+.achievements {
+  
+  width: 100%;
+  height: 30%;
+  background-color: #877
+}
+
+.closing {
+  widht: 100%;
+  height: 20%;
+}
