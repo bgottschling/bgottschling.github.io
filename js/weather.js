@@ -6,7 +6,7 @@ var $windText = $("#wind-text");
   
 //function for instruction dialog
   $(function() {
-    $( "#dialog" ).dialog();
+    $("#dialog").dialog();
   });
 
   // this function takes the temperature from the dataHandler and displays the temperature according to the correct temperature unit, and colors the temperature hot or cold.
@@ -78,11 +78,13 @@ var $windText = $("#wind-text");
     console.log("Update# " + counter++);
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function(position) {
+        console.log("test");
         getWeather(position.coords.latitude, position.coords.longitude).done(dataHandler);
       })
     } else {
       alert("geolocation not available");
     }
   }
+
   var updateInterval = setInterval(getLocation(), 300000);
 //});
