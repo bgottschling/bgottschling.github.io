@@ -15,8 +15,10 @@ $(document).ready(
     });
 
     $("#workMinus").click(function() {
-      pomodoro.wTime -= 60000;
-      $("#workTime").text(Math.floor(pomodoro.wTime / 60000));
+      if(pomodoro.wTime >= 0){
+        pomodoro.wTime -= 60000;
+        $("#workTime").text(Math.floor(pomodoro.wTime / 60000));
+      }
     });
 
     $("#breakPlus").click(function() {
@@ -25,8 +27,10 @@ $(document).ready(
     });
 
     $("#breakMinus").click(function() {
-      pomodoro.bTime -= 60000;
-      $("#breakTime").text(Math.floor(pomodoro.bTime / 60000));
+      if(pomodoro.bTime >= 0){
+        pomodoro.bTime -= 60000;
+        $("#breakTime").text(Math.floor(pomodoro.bTime / 60000));
+      }
     });
 
     $("#start").click(function() {
@@ -36,6 +40,7 @@ $(document).ready(
       }
       pomodoro.breakCount = 0;
       timer(pomodoro.wTime);
+      console.log(inter);
     });
 
     $("#stop").click(function() {
@@ -67,11 +72,9 @@ $(document).ready(
           time = time - 1000;
 
           if (time < 0 && pomodoro.breakCount) {
-            document.getElementById("notify1").play();
             clearInterval(pomodoro.inter);
             $("#displayTime").text("Done");
           } else if (time < 0) {
-            document.getElementById("notify").play();
             pomodoro.breakCount = 1;
             clearInterval(pomodoro.inter);
             timer(pomodoro.bTime);
