@@ -15,7 +15,7 @@ $(document).ready(
     });
 
     $("#workMinus").click(function() {
-      if(pomodoro.wTime >= 0){
+      if(pomodoro.wTime > 0){
         pomodoro.wTime -= 60000;
         $("#workTime").text(Math.floor(pomodoro.wTime / 60000));
       }
@@ -27,7 +27,7 @@ $(document).ready(
     });
 
     $("#breakMinus").click(function() {
-      if(pomodoro.bTime >= 0){
+      if(pomodoro.bTime > 0){
         pomodoro.bTime -= 60000;
         $("#breakTime").text(Math.floor(pomodoro.bTime / 60000));
       }
