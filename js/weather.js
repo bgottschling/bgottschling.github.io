@@ -41,6 +41,7 @@ var $windText = $("#wind-text");
   //handles response data and formats it accordingly since it is an asynchronous response object all data handling and formatting must be done within this function.
   function dataHandler(data) {
 
+    cosnole.log(data);
     formatTemperature(data.main.temp);
 
     if (data.main.temp && data.name && data.sys) {
