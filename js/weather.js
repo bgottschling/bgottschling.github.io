@@ -99,5 +99,5 @@ var $windText = $("#wind-text");
     }
   }
     */
-  var updateInterval = setInterval(getLocation().done(getWeather)), 300000);
+  var updateInterval = setInterval(getLocation().done(getWeather), 300000);
 //});
