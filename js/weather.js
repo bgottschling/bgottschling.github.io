@@ -44,22 +44,22 @@ var $windText = $("#wind-text");
 
     console.log(dataString);
     console.log(dataString.main);
-    console.log(data.main.temp);
+    console.log(dataString.main.temp);
 
-    formatTemperature(data.main.temp);
+    formatTemperature(dataString.main.temp);
 
-    if (data.main.temp && data.name && data.sys) {
+    if (dataString.main.temp && dataString.name && dataString.sys) {
       // display location name
-      $("#city-text").html(data.name + ", " + data.sys.country);
+      $("#city-text").html(dataString.name + ", " + dataString.sys.country);
       // display icon
-      if (data.weather) {
-        var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+      if (dataString.weather) {
+        var imgURL = "http://openweathermap.org/img/w/" + dataString.weather[0].icon + ".png";
         $("#weatherImg").attr("src", imgURL);
-        $("#weather-text").html(data.weather[0].description);
+        $("#weather-text").html(dataString.weather[0].description);
       }
       // display wind speed
-      if (data.wind) {
-        var knots = data.wind.speed * 1.9438445;
+      if (dataString.wind) {
+        var knots = dataString.wind.speed * 1.9438445;
         $windText.html(knots.toFixed(1) + " Knots");
       }
     }
