@@ -40,9 +40,10 @@ var $windText = $("#wind-text");
   }
   //handles response data and formats it accordingly since it is an asynchronous response object all data handling and formatting must be done within this function.
   function dataHandler(data) {
+    dataString = JSON.stringify(data);
 
-    console.log(data);
-    console.log(data.main);
+    console.log(dataString);
+    console.log(dataString.main);
     console.log(data.main.temp);
 
     formatTemperature(data.main.temp);
