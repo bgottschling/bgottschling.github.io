@@ -76,13 +76,14 @@ var $windText = $("#wind-text");
 
   function getLocation() {
     console.log("Update# " + counter++);
-    $.ajax({
+    
+    return $.ajax({
       url: "http://ip-api.com/json",
       dataType: "json",
       type: "GET",
       async: "true",
-      complete: getWeather(lat, lon).done(dataHandler)
     });
+  }
 
     /*
     if ("geolocation" in navigator) {
@@ -95,5 +96,5 @@ var $windText = $("#wind-text");
     }
   }
     */
-  var updateInterval = setInterval(getLocation(), 300000);
+  var updateInterval = setInterval(getLocation().done(getWeather(lat, lon).done(dataHandler)), 300000);
 //});
