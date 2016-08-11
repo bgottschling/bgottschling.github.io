@@ -48,7 +48,7 @@ var $windText = $("#wind-text");
       $("#city-text").html(data.name + ", " + data.sys.country);
       // display icon
       if (data.weather) {
-        var imgURL = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+        var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
         $("#weatherImg").attr("src", imgURL);
         $("#weather-text").html(data.weather[0].description);
       }
@@ -61,7 +61,7 @@ var $windText = $("#wind-text");
   }
   //This calls the api with the correct coordinates provided by the getLocation function
   function getWeather(lat, lon) {
-    var apiURI = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
+    var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
 
     return $.ajax({
       url: apiURI,
