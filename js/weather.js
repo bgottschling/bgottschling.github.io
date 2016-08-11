@@ -69,6 +69,8 @@ var $windText = $("#wind-text");
     var lon = data.lon;
     var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
 
+    console.log("success getWeather");
+    console.log(apiURI);
     return $.ajax({
       url: apiURI,
       dataType: "json",
