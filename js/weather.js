@@ -77,7 +77,7 @@ var $windText = $("#wind-text");
   function getLocation() {
     console.log("Update# " + counter++);
     $.ajax({
-      url: http://ip-api.com/json,
+      url: "http://ip-api.com/json",
       dataType: "json",
       type: "GET",
       async: "true",
