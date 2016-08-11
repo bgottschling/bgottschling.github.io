@@ -42,7 +42,9 @@ var $windText = $("#wind-text");
   function dataHandler(data) {
 
     console.log(data);
-    
+    console.log(data.main);
+    console.log(data.main.temp);
+
     formatTemperature(data.main.temp);
 
     if (data.main.temp && data.name && data.sys) {
