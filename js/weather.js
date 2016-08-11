@@ -60,7 +60,9 @@ var $windText = $("#wind-text");
     }
   }
   //This calls the api with the correct coordinates provided by the getLocation function
-  function getWeather(lat, lon) {
+  function getWeather(data) {
+    var lat = data.lat;
+    var lon = data.lon;
     var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
 
     return $.ajax({
@@ -96,5 +98,5 @@ var $windText = $("#wind-text");
     }
   }
     */
-  var updateInterval = setInterval(getLocation().done(getWeather(lat, lon).done(dataHandler)), 300000);
+  var updateInterval = setInterval(getLocation().done(getWeather).done(dataHandler)), 300000);
 //});
