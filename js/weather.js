@@ -78,7 +78,7 @@ var $windText = $("#wind-text");
       dataType: "json",
       type: "GET",
       async: "true",
-    }).done(dataHandler;/*.done(function dataHandler(data) {
+    }).done(dataHandler);/*.done(function dataHandler(data) {
     dataString = JSON.stringify(data);
 
     console.log(data);
