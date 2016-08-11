@@ -39,35 +39,36 @@ var $windText = $("#wind-text");
     }
   }
   //handles response data and formats it accordingly since it is an asynchronous response object all data handling and formatting must be done within this function.
+  /*
   function dataHandler(data) {
     dataString = JSON.stringify(data);
 
-    console.log(dataString);
-    console.log(dataString.main);
-    console.log(dataString.main.temp);
+    console.log(data);
+    console.log(data.main);
+    console.log(data.main.temp);
 
-    formatTemperature(dataString.main.temp);
+    formatTemperature(data.main.temp);
 
-    if (dataString.main.temp && dataString.name && dataString.sys) {
+    if (data.main.temp && data.name && data.sys) {
       // display location name
-      $("#city-text").html(dataString.name + ", " + dataString.sys.country);
+      $("#city-text").html(data.name + ", " + data.sys.country);
       // display icon
-      if (dataString.weather) {
-        var imgURL = "http://openweathermap.org/img/w/" + dataString.weather[0].icon + ".png";
+      if (data.weather) {
+        var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
         $("#weatherImg").attr("src", imgURL);
-        $("#weather-text").html(dataString.weather[0].description);
+        $("#weather-text").html(data.weather[0].description);
       }
       // display wind speed
-      if (dataString.wind) {
-        var knots = dataString.wind.speed * 1.9438445;
+      if (data.wind) {
+        var knots = data.wind.speed * 1.9438445;
         $windText.html(knots.toFixed(1) + " Knots");
       }
     }
-  }
+}*/
   //This calls the api with the correct coordinates provided by the getLocation function
-  function getWeather(data) {
-    var lat = data.lat;
-    var lon = data.lon;
+  function getWeather(locdata) {
+    var lat = locdata.lat;
+    var lon = locdata.lon;
     var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
 
     console.log("success getWeather");
@@ -77,7 +78,31 @@ var $windText = $("#wind-text");
       dataType: "json",
       type: "GET",
       async: "true",
-    });
+    }).done(function dataHandler(data) {
+    dataString = JSON.stringify(data);
+
+    console.log(data);
+    console.log(data.main);
+    console.log(data.main.temp);
+
+    formatTemperature(data.main.temp);
+
+    if (data.main.temp && data.name && data.sys) {
+      // display location name
+      $("#city-text").html(data.name + ", " + data.sys.country);
+      // display icon
+      if (data.weather) {
+        var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+        $("#weatherImg").attr("src", imgURL);
+        $("#weather-text").html(data.weather[0].description);
+      }
+      // display wind speed
+      if (data.wind) {
+        var knots = data.wind.speed * 1.9438445;
+        $windText.html(knots.toFixed(1) + " Knots");
+      }
+    }
+  });
   }
 
   //Passes the browser's geolocation into the getWeather function once its done the response from the getWeather call will be passed to the data handler for formatting.
@@ -105,5 +130,5 @@ var $windText = $("#wind-text");
     }
   }
     */
-  var updateInterval = setInterval(getLocation().done(getWeather).done(dataHandler), 300000);
+  var updateInterval = setInterval(getLocation().done(getWeather), 300000);
 //});
