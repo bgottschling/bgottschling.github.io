@@ -70,7 +70,6 @@ var $windText = $("#wind-text");
       dataType: "json",
       type: "GET",
       async: "true",
-      success: dataHandler(data)
     });
   }
 
@@ -99,5 +98,5 @@ var $windText = $("#wind-text");
     }
   }
     */
-  var updateInterval = setInterval(getLocation().done(getWeather), 300000);
+  var updateInterval = setInterval(getLocation().done(getWeather).done(dataHandler), 300000);
 //});
