@@ -39,7 +39,7 @@ var $windText = $("#wind-text");
     }
   }
   //handles response data and formats it accordingly since it is an asynchronous response object all data handling and formatting must be done within this function.
-  /*
+  
   function dataHandler(data) {
     dataString = JSON.stringify(data);
 
@@ -64,7 +64,7 @@ var $windText = $("#wind-text");
         $windText.html(knots.toFixed(1) + " Knots");
       }
     }
-}*/
+}
   //This calls the api with the correct coordinates provided by the getLocation function
   function getWeather(locdata) {
     var lat = locdata.lat;
@@ -78,7 +78,7 @@ var $windText = $("#wind-text");
       dataType: "json",
       type: "GET",
       async: "true",
-    }).done(function dataHandler(data) {
+    }).done(dataHandler;/*.done(function dataHandler(data) {
     dataString = JSON.stringify(data);
 
     console.log(data);
@@ -102,7 +102,7 @@ var $windText = $("#wind-text");
         $windText.html(knots.toFixed(1) + " Knots");
       }
     }
-  });
+  });*/
   }
 
   //Passes the browser's geolocation into the getWeather function once its done the response from the getWeather call will be passed to the data handler for formatting.
