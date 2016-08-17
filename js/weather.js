@@ -42,16 +42,11 @@ var $windText = $("#wind-text");
   
   function dataHandler(data) {
     dataString = JSON.stringify(data);
-
-    console.log(data);
-    console.log(data.main);
     console.log(data.main.temp);
 
     formatTemperature(data.main.temp);
 
-    if (data.main.temp && data.name && data.sys) {
-      // display location name
-      $("#city-text").html(data.name + ", " + data.sys.country);
+    if (data.main.temp && data.sys) {
       // display icon
       if (data.weather) {
         var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
@@ -71,6 +66,7 @@ var $windText = $("#wind-text");
     var lon = locdata.lon;
     var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
 
+    //call weather api for weather data
     console.log("success getWeather");
     console.log(apiURI);
     return $.ajax({
@@ -78,31 +74,12 @@ var $windText = $("#wind-text");
       dataType: "json",
       type: "GET",
       async: "true",
-    }).done(dataHandler);/*.done(function dataHandler(data) {
-    dataString = JSON.stringify(data);
+    }).done(dataHandler);
 
-    console.log(data);
-    console.log(data.main);
-    console.log(data.main.temp);
-
-    formatTemperature(data.main.temp);
-
-    if (data.main.temp && data.name && data.sys) {
-      // display location name
-      $("#city-text").html(data.name + ", " + data.sys.country);
-      // display icon
-      if (data.weather) {
-        var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-        $("#weatherImg").attr("src", imgURL);
-        $("#weather-text").html(data.weather[0].description);
-      }
-      // display wind speed
-      if (data.wind) {
-        var knots = data.wind.speed * 1.9438445;
-        $windText.html(knots.toFixed(1) + " Knots");
-      }
+    // display location name
+    if (locdata){ 
+      $("#city-text").html(locdata.city + ", " + locdata.region);
     }
-  });*/
   }
 
   //Passes the browser's geolocation into the getWeather function once its done the response from the getWeather call will be passed to the data handler for formatting.
@@ -111,6 +88,7 @@ var $windText = $("#wind-text");
   function getLocation() {
     console.log("Update# " + counter++);
     
+    //call location api for location data
     return $.ajax({
       url: "http://ip-api.com/json",
       dataType: "json",
