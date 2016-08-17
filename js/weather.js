@@ -66,6 +66,13 @@ var $windText = $("#wind-text");
     var lon = locdata.lon;
     var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
 
+    if (locdata){ 
+      console.log("success");
+      $("#city-text").html(locdata.city + ", " + locdata.region);
+    } else {
+    console.log("fail");
+    }
+
     //call weather api for weather data
     console.log("success getWeather");
     console.log(apiURI);
@@ -77,9 +84,7 @@ var $windText = $("#wind-text");
     }).done(dataHandler);
 
     // display location name
-    if (locdata){ 
-      $("#city-text").html(locdata.city + ", " + locdata.region);
-    }
+
   }
 
   //Passes the browser's geolocation into the getWeather function once its done the response from the getWeather call will be passed to the data handler for formatting.
