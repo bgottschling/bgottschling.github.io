@@ -18,16 +18,7 @@ $('#submit').on('click',
     if (data){
       for (var i=0; i < 10; i++){
 
-        $('body').append(
-          '<div class="row">
-            <a href=' + data[3][i] + '>
-              <div class="well">
-                <h2>' + data[1][i] + '</h2>
-                <p>' + data[2][i] + '</p>
-              </div>
-            </a>
-          </div>'
-          );
+        $('body').append('<div class="row"><a href=' + data[3][i] + '><div class="well"><h2>' + data[1][i] + '</h2><p>' + data[2][i] + '</p></div></a></div>');
      }
     }
   }
