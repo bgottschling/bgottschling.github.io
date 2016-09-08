@@ -11,7 +11,7 @@ $("#submit").on("click",
         type:"GET",
         async:"true",
         xhrFields:{
-          Access-Control-Allow-Origin: *;
+          "Access-Control-Allow-Origin": *;
         }  
       }).done(dataHandler);
 
