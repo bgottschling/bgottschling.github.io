@@ -9,7 +9,10 @@ $("#submit").on("click",
       return $.ajax({
         url: apiURL,
         type:"GET",
-        async: "true"  
+        async:"true",
+        xhrFields:{
+          Access-Control-Allow-Origin: *;
+        }  
       }).done(dataHandler);
 
       console.log(search);
