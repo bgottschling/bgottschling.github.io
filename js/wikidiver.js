@@ -6,12 +6,13 @@ $('#submit').on('click',
       var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + search + '&limit=10&namespace=0&profile=fuzzy&format=json';
       clicked = true;
 
-      return $.ajax({
+      $.ajax({
         url: apiURL,
         type:'GET',
+        dataType: 'jsonp',
         async:'true',
         headers:{
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin: *'
         }  
       }).done(dataHandler);
 
