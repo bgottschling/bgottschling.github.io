@@ -10,10 +10,7 @@ $('#submit').on('click',
         url: apiURL,
         type:'GET',
         dataType: 'jsonp',
-        async:'true',
-        headers:{
-          'Access-Control-Allow-Origin: *'
-        }  
+        async:'true',  
       }).done(dataHandler);
 
       console.log(search);
