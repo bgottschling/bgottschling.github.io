@@ -33,7 +33,19 @@ $(document).on('keypress',
     });
 
 $('#random').on('click', 
-    function GoRandom(data){
+   function RandomWord() {
+        var requestStr = "https://randomword.setgetgo.com/get.php";
+
+        $.ajax({
+            type: "GET",
+            url: requestStr,
+            dataType: "jsonp",
+            
+        }).done(GoRandom);
+    }   
+);
+
+function GoRandom(data){
       
         var search = $('#search').val();
         var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data.word + '&limit=10&namespace=0&profile=fuzzy&format=json';
@@ -46,18 +58,8 @@ $('#random').on('click',
           dataType: 'jsonp',
           async:'true',  
         }).done(dataHandler);
-    });
+}
 
-function RandomWord() {
-        var requestStr = "https://randomword.setgetgo.com/get.php";
-
-        $.ajax({
-            type: "GET",
-            url: requestStr,
-            dataType: "jsonp",
-            
-        }).done(GoRandom);
-    }
 
   function dataHandler(data){
     console.log(data);
