@@ -2,5 +2,8 @@
   margin-top: 20%;
 }
 .results {
-  margin: 15%;
+  margin: 0 15% 0 15%;
+}
+#content-area{
+	margin-top: 10%;
 }
