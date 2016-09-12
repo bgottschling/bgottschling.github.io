@@ -1,3 +1,6 @@
+body{
+  background-color: #BF6B00;
+}
 .search{
   margin-top: 20%;
 }
@@ -14,6 +17,5 @@
 }
 #content-area{
 	margin-top: 10%;
-	background-color: #BF6B00;
 	color: #FFB865;
 }
