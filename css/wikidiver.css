@@ -1,6 +1,10 @@
 .search{
   margin-top: 20%;
 }
+.navbar{
+	background-color: #F58B05;
+	color: #FFBB65;
+}
 .results {
   margin: 0 15% 0 15%;
 }
