@@ -8,6 +8,12 @@
 .results {
   margin: 0 15% 0 15%;
 }
+.well{
+	background-color: #965400;
+	color: #FFB865;
+}
 #content-area{
 	margin-top: 10%;
+	background-color: #BF6B00;
+	color: #FFB865;
 }
