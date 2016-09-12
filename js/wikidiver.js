@@ -34,7 +34,7 @@ $(document).on('keypress',
 
 $('#random').on('click', 
    function RandomWord() {
-        var requestStr = "http://randomword.setgetgo.com/get.php";
+        var requestStr = "https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=5";
 
         $.ajax({
             type: "GET",
@@ -48,8 +48,8 @@ $('#random').on('click',
 function GoRandom(data){
       
         var search = $('#search').val();
-        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data.word + '&limit=10&namespace=0&profile=fuzzy&format=json';
-        alert(data.word);
+        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data.query.random[0].title + '&limit=10&namespace=0&profile=fuzzy&format=json';
+        alert(data.query.random[0].title);
         $('#content-area').html('');
 
         $.ajax({
