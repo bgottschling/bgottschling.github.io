@@ -3,8 +3,8 @@ $('#submit').on('click',
       var search = $('#search').val();
       var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + search + '&limit=10&namespace=0&profile=fuzzy&format=json';
 
-      $('body').html('');
-      
+      $('#content-area').html('');
+
       $.ajax({
         url: apiURL,
         type:'GET',
@@ -23,7 +23,7 @@ $('#submit').on('click',
     if (data){
       for (var i=0; i < 10; i++){
 
-        $('body').append('<div class="row"><a href=' + data[3][i] + '><div class="well"><h2>' + data[1][i] + '</h2><p>' + data[2][i] + '</p></div></a></div>');
+        $('#content-area').append('<div class="row"><a href=' + data[3][i] + '><div class="well"><h2>' + data[1][i] + '</h2><p>' + data[2][i] + '</p></div></a></div>');
 
      }
     }
