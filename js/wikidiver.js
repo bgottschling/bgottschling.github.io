@@ -34,7 +34,7 @@ $(document).on('keypress',
 
 $('#random').on('click', 
    function RandomWord() {
-        var requestStr = "https://randomword.setgetgo.com/get.php";
+        var requestStr = "http://randomword.setgetgo.com/get.php";
 
         $.ajax({
             type: "GET",
