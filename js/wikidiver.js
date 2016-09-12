@@ -36,7 +36,7 @@ $('#random').on('click',
     function GoRandom(data){
       
         var search = $('#search').val();
-        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data.Word + '&limit=10&namespace=0&profile=fuzzy&format=json';
+        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data + '&limit=10&namespace=0&profile=fuzzy&format=json';
 
         $('#content-area').html('');
 
@@ -49,7 +49,7 @@ $('#random').on('click',
     });
 
 function RandomWord() {
-        var requestStr = "http://randomword.setgetgo.com/get.php";
+        var requestStr = "https://randomword.setgetgo.com/get.php";
 
         $.ajax({
             type: "GET",
