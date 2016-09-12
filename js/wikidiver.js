@@ -39,7 +39,7 @@ $('#random').on('click',
         $.ajax({
             type: "GET",
             url: requestStr,
-            dataType: "jsonp",
+            dataType: "json",
             
         }).done(GoRandom);
     }   
