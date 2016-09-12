@@ -39,7 +39,9 @@ $(document).on('keypress',
 
     if (data){
       for (var i=0; i < 10; i++){
-
+        if (data[1][i] == undefined || data[2][i] == undefined){
+          break;
+        } else
         $('#content-area').append('<div class="results row"><a href=' + data[3][i] + '><div class="text-center well"><h2>' + data[1][i] + '</h2><p>' + data[2][i] + '</p></div></a></div>');
 
      }
