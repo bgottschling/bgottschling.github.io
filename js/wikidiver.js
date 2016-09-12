@@ -36,8 +36,8 @@ $('#random').on('click',
     function GoRandom(data){
       
         var search = $('#search').val();
-        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data + '&limit=10&namespace=0&profile=fuzzy&format=json';
-
+        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data.word + '&limit=10&namespace=0&profile=fuzzy&format=json';
+        alert(data.word);
         $('#content-area').html('');
 
         $.ajax({
