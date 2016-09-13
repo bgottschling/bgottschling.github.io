@@ -40,7 +40,7 @@ $('#random').on('click',
             type: "GET",
             url: requestStr,
             dataType: "json",
-            xhr.setRequestHeader("X-Mashape-Authorization","r9j630dvLimshyDNZ6gBHuiHrFA3p1T1WEcjsnrTWnK4e99CBQ")
+            headers: {"X-Mashape-Authorization","r9j630dvLimshyDNZ6gBHuiHrFA3p1T1WEcjsnrTWnK4e99CBQ"}
         }).done(GoRandom);
     }   
 );
