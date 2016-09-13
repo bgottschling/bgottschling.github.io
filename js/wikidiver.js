@@ -34,13 +34,13 @@ $(document).on('keypress',
 
 $('#random').on('click', 
    function RandomWord() {
-        var requestStr = "https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=5";
+        var requestStr = "https://wordsapiv1.p.mashape.com/words/?random=true";
 
         $.ajax({
             type: "GET",
             url: requestStr,
             dataType: "json",
-            
+            xhr.setRequestHeader("X-Mashape-Authorization","r9j630dvLimshyDNZ6gBHuiHrFA3p1T1WEcjsnrTWnK4e99CBQ")
         }).done(GoRandom);
     }   
 );
@@ -48,8 +48,8 @@ $('#random').on('click',
 function GoRandom(data){
       
         var search = $('#search').val();
-        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data.query.random[0].title + '&limit=10&namespace=0&profile=fuzzy&format=json';
-        alert(data.query.random[0].title);
+        var apiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + data.word + '&limit=10&namespace=0&profile=fuzzy&format=json';
+        alert(data.word);
         $('#content-area').html('');
 
         $.ajax({
