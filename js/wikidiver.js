@@ -34,13 +34,15 @@ $(document).on('keypress',
 
 $('#random').on('click', 
    function RandomWord() {
-        var requestStr = "https://wordsapiv1.p.mashape.com/words/?random=true";
+        var requestStr = 'https://wordsapiv1.p.mashape.com/words/?random=true';
 
         $.ajax({
-            type: "GET",
+            type: 'GET',
             url: requestStr,
-            dataType: "json",
-            headers: {"X-Mashape-Authorization","r9j630dvLimshyDNZ6gBHuiHrFA3p1T1WEcjsnrTWnK4e99CBQ"}
+            dataType: 'json',
+            beforeSend: function(xhr) {
+		    				xhr.setRequestHeader('X-Mashape-Authorization', 'r9j630dvLimshyDNZ6gBHuiHrFA3p1T1WEcjsnrTWnK4e99CBQ'); // Enter here your Mashape key
+		    			}
         }).done(GoRandom);
     }   
 );
