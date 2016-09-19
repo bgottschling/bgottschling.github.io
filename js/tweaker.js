@@ -1,5 +1,5 @@
 $(window).load(
-	console.log('loaded');
+	console.log('loaded'),
 	addChannels());
 
 
