@@ -2,8 +2,6 @@ $(window).load(getStream());
 
 var channels = ['freecodecamp','ESL_SC2','frankieonpcin1080p'];
 
-function 
-
 function addChannels(chan){
 	console.log('addChannels executed');
 
