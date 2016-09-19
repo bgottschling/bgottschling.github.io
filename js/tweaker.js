@@ -11,7 +11,7 @@ const addChannels = (chan) => {
 		channels.push(chan);
 	}
 
-	for (var i = 0, var len = channels.length; i < len; i++){
+	for (var i = 0, len = channels.length; i < len; i++){
 		console.log("channel call iteration");
 		getStream(channels[i]);
 		channels.shift();
