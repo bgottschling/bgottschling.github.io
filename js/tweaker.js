@@ -3,7 +3,7 @@ $(window).load(
 	addChannels());
 
 
-const addChannels = (chan) => {
+function addChannels(chan){
 	console.log('addChannels executed');
 	var channels = ['freecodecamp','ESL_SC2','frankieonpcin1080p'];
 
@@ -20,7 +20,7 @@ const addChannels = (chan) => {
 }
 
 
-const getStream = (chan) => {
+function getStream(chan) {
 
 
 	var apiURL = 'https://api.twitch.tv/kraken/streams/' + chan +'';
@@ -32,7 +32,7 @@ const getStream = (chan) => {
 	}).done(buildViewer);
 }
 
-const buildViewer = (data) => {
+function buildViewer(data) {
 	console.log(data.channel);
 	var $sec1 = $('#sec1');
 	var $sec2 = $('#sec2');
