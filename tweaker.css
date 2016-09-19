@@ -1,0 +1,60 @@
+.form-control, .btn{
+  border-radius: 0;
+}
+.stream-section{
+  margin: 2%;
+}
+well, .stream-item{
+  margin: 0 ;
+  border-radius: 0%;
+  background-color: #CCC;
+}
+
+#tweaker{
+  color: #FFF;
+  background-color: #433f4a;
+}
+#suggested{
+  
+  margin-top: 150px;
+  width: 100%;
+}
+@media screen and (max-width: 769px) {
+  #suggested{
+    margin-top: 210px;
+  }
+}
+hr.line { 
+    border: 0; 
+    height: 1px;
+    position: relative;
+    margin: 0.5em 0; /* Keep other elements away from pseudo elements*/
+}
+hr.line:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.line:after {
+    content:'';
+    height: 0.5em;   /* half the height of :before */
+    top: 1px;        /* height of hr*/
+}
+
+hr.line:before, hr.line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+}
+
+hr.line, hr.line:before {
+    background: -moz-radial-gradient(left, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+    background: -webkit-gradient(radial, left left, 0px, left left, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));*/
+    background: -webkit-radial-gradient(left, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -o-radial-gradient(left, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -ms-radial-gradient(left, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: radial-gradient(ellipse at left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
+body, hr.line:after {
+    background: #f4f4f4;
+}
