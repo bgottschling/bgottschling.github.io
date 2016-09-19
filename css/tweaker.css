@@ -1,16 +1,30 @@
+@font-face {
+    font-family: tweaker;
+    src: url(../assets/fonts/tweaker.ttf) format('truetype');
+}
+@media screen and (max-width: 769px) {
+  #suggested{
+    margin-top: 210px;
+  }
+}
 .form-control, .btn{
   border-radius: 0;
 }
 .stream-section{
   margin: 2%;
 }
-well, .stream-item{
+.stream-item{
   margin: 0 ;
   border-radius: 0%;
   background-color: #CCC;
 }
-
+.title-text{
+  font-family: 'tweaker';
+  color: #FFF;
+  background-color: #433f4a;
+}
 #tweaker{
+  font-family: 'tweaker';
   color: #FFF;
   background-color: #433f4a;
 }
@@ -19,11 +33,7 @@ well, .stream-item{
   margin-top: 150px;
   width: 100%;
 }
-@media screen and (max-width: 769px) {
-  #suggested{
-    margin-top: 210px;
-  }
-}
+
 hr.line { 
     border: 0; 
     height: 1px;
