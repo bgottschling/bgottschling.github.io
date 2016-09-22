@@ -9,12 +9,15 @@ function getStream() {
 
 	channels.forEach(function(chan){
 
-		var apiURL = 'https://api.twitch.tv/kraken/streams/' + chan +'';
+		var apiURL = 'https://api.twitch.tv/kraken/streams/' + chan;
 		console.log(chan);
 		$.ajax({
 			type:'GET',
 			dataType:'jsonp',
 			URL: apiURL,
+			Headers : {
+				'Client-Id': 'fogk4a9ms544lema5ki24jvdbz8g4wz'
+			}
 			async: 'fasle'
 		}).done(buildViewer);
 
