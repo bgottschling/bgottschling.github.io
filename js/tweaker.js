@@ -6,8 +6,8 @@ $(window).load(getStream());
 
 function getStream() {
 	var channels = ['freecodecamp','ESL_SC2','frankieonpcin1080p'];
-
-	channels.forEach(function(chan){
+	var chan = 'ESL_SC2'
+	//channels.forEach(function(chan){
 
 		var apiURL = 'https://api.twitch.tv/kraken/streams/' + chan;
 		console.log(chan);
@@ -21,13 +21,13 @@ function getStream() {
 			async: 'fasle'
 		}).done(buildViewer);
 
-	});
+	//});
 
 
 }
 
 function buildViewer(data) {
-	console.log("channel is" + data.channel);
+	console.log("channel is" + data);
 	var $sec1 = $('#sec1');
 	var $sec2 = $('#sec2');
 	var suggested = 0;
