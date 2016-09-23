@@ -13,12 +13,12 @@ function getStream() {
 		console.log(chan);
 		$.ajax({
 			type:'GET',
-			dataType:'jsonp',
-			URL: apiURL,
-			Headers : {
+			dataType:'json',
+			URL:apiURL,
+			Headers:{
 				'Client-Id': 'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
-			async: 'fasle'
+			async:'fasle'
 		}).done(buildViewer);
 
 	//});
