@@ -11,7 +11,7 @@ function getStream() {
 
 		var apiURL = 'https://api.twitch.tv/kraken/streams/' + chan;
 		console.log(chan);
-		/*$.ajax({
+		$.ajax({
 			type:'GET',
 			dataType:'json',
 			URL:apiURL,
@@ -19,8 +19,7 @@ function getStream() {
 				'Client-Id': 'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
 			async:'fasle'
-		}).done(buildViewer);*/
-
+		}).done(buildViewer);
 	//});
 
 
