@@ -1,4 +1,4 @@
-$(window).load(getStream());
+//$(window).load(getStream());
 
 
 
