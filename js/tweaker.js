@@ -28,7 +28,7 @@ function getStream() {
 				'Client-Id': 'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
 			async:'fasle'
-		}).done(buildViewer).fail(alert(error));
+		}).done(buildViewer).fail(alert("Your request has failed"));
 	//});
 }
 
