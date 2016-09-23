@@ -21,9 +21,10 @@ function getStream() {
 			async:'fasle'
 		}).done(buildViewer);
 	//});
-
-
 }
+
+getStream();
+
 
 function buildViewer(data) {
 	console.log("channel is" + data);
