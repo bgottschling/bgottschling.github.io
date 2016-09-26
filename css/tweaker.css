@@ -24,7 +24,7 @@
   background-color: #433f4a;
 }
 #suggested{  
-  margin-top: 150px;
+  margin-top: 210px;
   width: 100%;
 }
 
@@ -62,8 +62,8 @@ hr.line, hr.line:before {
 body, hr.line:after {
     background: #f4f4f4;
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
   #suggested{
-    margin-top: 210px;
+    margin-top: 270px;
   }
 }
