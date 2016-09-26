@@ -22,7 +22,7 @@ function getStream() {
 		console.log(chan);
 		$.ajax({
 			type:'GET',
-			dataType:'json',
+			dataType:'jsonp',
 			URL:apiURL,
 			Headers:{
 				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
