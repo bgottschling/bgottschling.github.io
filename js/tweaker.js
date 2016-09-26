@@ -22,10 +22,10 @@ function getStream() {
 		console.log(chan);
 		$.ajax({
 			type:'GET',
-			dataType:'jsonp',
+			dataType:'json',
 			URL:apiURL,
 			Headers:{
-				'Client-Id': 'fogk4a9ms544lema5ki24jvdbz8g4wz'
+				'Client-ID': 'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
 			async:'fasle'
 		}).done(buildViewer).fail(alert("Your request has failed"));
