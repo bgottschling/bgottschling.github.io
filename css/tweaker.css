@@ -2,11 +2,6 @@
     font-family: tweaker;
     src: url(../assets/fonts/tweaker.ttf) format('truetype');
 }
-@media screen and (max-width: 769px) {
-  #suggested{
-    margin-top: 210px;
-  }
-}
 .form-control, .btn{
   border-radius: 0;
 }
@@ -28,8 +23,7 @@
   color: #FFF;
   background-color: #433f4a;
 }
-#suggested{
-  
+#suggested{  
   margin-top: 150px;
   width: 100%;
 }
@@ -67,4 +61,9 @@ hr.line, hr.line:before {
 
 body, hr.line:after {
     background: #f4f4f4;
+}
+@media screen and (max-width: 769px) {
+  #suggested{
+    margin-top: 210px;
+  }
 }
