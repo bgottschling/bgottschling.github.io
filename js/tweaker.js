@@ -10,9 +10,9 @@ function getStream() {
 		console.log(apiURL);
 		$.ajax({
 			type:'GET',
+			dataType:'json',
 			URL:apiURL,
 			headers:{
-				'Accept':'application/vnd.twitchtv.v3+json',
 				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
 			async:'true'
