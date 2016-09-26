@@ -22,10 +22,10 @@ function getStream() {
 
 getStream();
 
-function buildViewer(data) {
+function buildViewer(chanData) {
 
     console.log("success");
-	console.log("channel is" + data);
+	console.log("channel is" + chandata);
 
 	var suggested = 0;
 	/*if (suggested < 3){
