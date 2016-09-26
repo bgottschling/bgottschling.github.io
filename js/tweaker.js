@@ -15,8 +15,8 @@ function getStream() {
 				'Accept':'application/vnd.twitchtv.v3+json',
 				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
-			async:'fasle'
-		}).done(buildViewer).fail(alert("Your request has failed"));
+			async:'true'
+		}).done(buildViewer);
 	//});
 }
 
