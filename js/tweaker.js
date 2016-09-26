@@ -18,14 +18,14 @@ function getStream() {
 	var chan = 'ESL_SC2'
 	//channels.forEach(function(chan){
 
-		var apiURL = 'https://api.twitch.tv/kraken/streams/' + chan;
+		var apiURL = 'https://api.twitch.tv/kraken/channels/' + chan;
 		console.log(chan);
 		$.ajax({
 			type:'GET',
 			dataType:'json',
 			URL:apiURL,
 			Headers:{
-				'Client-ID': 'fogk4a9ms544lema5ki24jvdbz8g4wz'
+				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
 			async:'fasle'
 		}).done(buildViewer).fail(alert("Your request has failed"));
