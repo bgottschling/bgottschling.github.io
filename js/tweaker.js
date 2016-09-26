@@ -19,12 +19,12 @@ function getStream() {
 	//channels.forEach(function(chan){
 
 		var apiURL = 'https://api.twitch.tv/kraken/channels/' + chan;
-		console.log(chan);
+		console.log(apiURL);
 		$.ajax({
 			type:'GET',
-			dataType:'jsonp',
 			URL:apiURL,
-			Headers:{
+			headers:{
+				'Accept':'application/vnd.twitchtv.v3+json',
 				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
 			async:'fasle'
