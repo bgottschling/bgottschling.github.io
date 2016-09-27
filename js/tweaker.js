@@ -18,8 +18,9 @@ function getStream() {
 				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
 			async:'false'
-		}).done(buildViewer);
-	//});*/
+		}).done(buildViewer);*/
+	});
+	
 }
 
 getStream();
