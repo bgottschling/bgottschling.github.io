@@ -6,16 +6,16 @@ function getStream() {
 	var chan = 'ESL_SC2'
 	//channels.forEach(function(chan){
 
-		var apiURL = 'https://api.twitch.tv/kraken/channels/' + chan;
+		var apiURL = 'https://api.twitch.tv/kraken' + chan;
 		console.log(apiURL);
 		$.ajax({
 			type:'GET',
-			dataType:'json',
+			dataType:'jsonp',
 			URL:apiURL,
 			headers:{
-				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
+				'Client-ID:fogk4a9ms544lema5ki24jvdbz8g4wz'
 			},
-			async:'true'
+			async:'false'
 		}).done(buildViewer);
 	//});
 }
