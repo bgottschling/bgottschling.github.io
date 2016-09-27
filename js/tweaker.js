@@ -10,7 +10,7 @@ function getStream() {
 		console.log(apiURL);
 		$.ajax({
 			type:'GET',
-			dataType:'jsonp',
+			dataType:'json',
 			URL:apiURL,
 			headers:{
 				'Client-ID':'fogk4a9ms544lema5ki24jvdbz8g4wz'
