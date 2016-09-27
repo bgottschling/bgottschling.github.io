@@ -2,14 +2,13 @@
 
 
 function getStream() {
-	var channels = ['freecodecamp','ESL_SC2','frankieonpcin1080p'];
-	var chan = 'ESL_SC2'
+	var channels = ['freecodecamp','ESL_SC2','frankieonpcin1080p',"brndng"];
 
 
-	buildViewer(chan);
-	//channels.forEach(function(chan){
-
-		var apiURL = 'https://api.twitch.tv/kraken'; //+ chan;
+	
+	channels.forEach(function(chan){
+		buildViewer(chan);
+		//var apiURL = 'https://api.twitch.tv/kraken'; //+ chan;
 		/*console.log(apiURL);
 		$.ajax({
 			type:'GET',
