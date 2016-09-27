@@ -6,7 +6,7 @@ function getStream() {
 	var chan = 'ESL_SC2'
 	//channels.forEach(function(chan){
 
-		var apiURL = 'https://api.twitch.tv/kraken' + chan;
+		var apiURL = 'https://api.twitch.tv/kraken'; //+ chan;
 		console.log(apiURL);
 		$.ajax({
 			type:'GET',
