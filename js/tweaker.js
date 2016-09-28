@@ -1,10 +1,23 @@
 
 var suggested = 0;
+$("#addGroupBtn").on('click', function(){
+	var chan = $('addGroup').val(); 
+
+	if($('.caption').each(function(index){
+			if ($(this).text() == chan){
+				console.log('chan is ' + chan + ':' + 'checking' + $(this).text());
+				alert('You already have a channel by that name.');
+				return false;
+			}
+		})
+	) else
+	buildViewer(chan);
+});
+
+
 function getStream() {
 	var channels = ['freecodecamp','ESL_SC2',"brndng"];
 
-
-	
 	channels.forEach(function(chan){
 		buildViewer(chan);
 	});
@@ -15,8 +28,8 @@ getStream();
 
 function buildViewer(chanData) {
 
-    console.log("success");
-	console.log("channel is " + chanData);
+    console.log('success');
+	console.log('channel is ' + chanData);
 
 	
 	if (suggested < 3){
