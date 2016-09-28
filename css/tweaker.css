@@ -1,7 +1,3 @@
-@font-face {
-    font-family: tweaker;
-    src: url(../assets/fonts/tweaker.ttf) format('truetype');
-}
 .form-control, .btn{
   border-radius: 0;
 }
