@@ -2,16 +2,22 @@
 var suggested = 0;
 $("#addGroupBtn").on('click', function(){
 	var chan = $('addGroup').val(); 
+	var passed = false;
 
-	if($('.caption').each(function(index){
-			if ($(this).text() == chan){
-				console.log('chan is ' + chan + ':' + 'checking' + $(this).text());
+	$('.caption').each(function(index){
+			console.log('chan is ' + chan + ':' + 'checking' + $(this).text());
+			if ($(this).text() == chan){		
 				alert('You already have a channel by that name.');
-				return false;
+				return;	
+			} else {
+
+				passed = true;
+				return;
 			}
-		})
-	) else
-	buildViewer(chan);
+	})
+	if (passed){
+		buildViewer(chan);
+	}
 });
 
 
