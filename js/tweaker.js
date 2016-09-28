@@ -1,7 +1,7 @@
 
 var suggested = 0;
 $("#addGroupBtn").on('click', function(){
-	var chan = $('addGroup').val(); 
+	var chan = $('#addGroup').val(); 
 	var passed = false;
 
 	$('.caption').each(function(index){
