@@ -11,11 +11,10 @@ $("#addGroupBtn").on('click', function(){
 				passed = false;
 				return false;	
 			} else {
-
 				passed = true;
 			}
 	})
-	if (passed === true){
+	if (passed){
 		buildViewer(chan);
 		passed = false;
 	}
