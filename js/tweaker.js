@@ -8,13 +8,14 @@ $("#addGroupBtn").on('click', function(){
 			console.log('chan is ' + chan + ':' + 'checking' + $(this).text());
 			if ($(this).text() == chan){		
 				alert('You already have a channel by that name.');
+				passed = false;
 				return false;	
 			} else {
 
 				passed = true;
 			}
 	})
-	if (passed){
+	if (passed === true){
 		buildViewer(chan);
 		passed = false;
 	}
