@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Unbeatable Tic-Tac-Toe</title>
+  
+  
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+    <link rel="stylesheet" href="css/tictactoe.css">
+
+  
+</head>
+
+<body>
+  <div class='container-fluid header'>
+
+  <header>
+      <div class='center-block text-center'>
+        <h1 class='jumbotron'>Ubeatable Tic-Tac-Toe</h1>
+      </div>
+</header>
+</div>
+<div class="wrapper positioning">
+  <canvas id='background' class='background positioning'></canvas>
+  <div id='gameboard' class="positioning board container ">
+    <div class='row'>
+      <div class='col-xs-3 square' id='0' data='1'>
+      </div>
+      <div class='col-xs-3 square' id='1' data='2'>
+      </div>
+      <div class='col-xs-3 square' id='2' data='4'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-3 square' id='3' data='8'>
+      </div>
+      <div class='col-xs-3 square' id='4' data='16'>
+      </div>
+      <div class='col-xs-3 square' id='5' data='32'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-3 square' id='6' data='64'>
+      </div>
+      <div class='col-xs-3 square' id='7' data='128'>
+      </div>
+      <div class='col-xs-3 square' id='8' data='256'>
+      </div>
+    </div>   
+  </div>
+  <div id='choice' class='choice container'>
+  <h4>Choose an icon:</h4>
+  <button id='btn-X'class='btn'>X</button>
+  <button id='btn-O' class='btn'>O</button>
+</div>
+  <div id='gameOver' class='gameOver container'>
+  <p id='message' class=message>You Win!</p>
+</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script src="js/tictactoe.js"></script>
+
+</body>
+</html>

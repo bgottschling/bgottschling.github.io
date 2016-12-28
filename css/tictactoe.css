@@ -1,0 +1,98 @@
+body{
+  text-align:center;
+  background-color:##;
+}
+
+.header{
+  background-color:#aaddaa;
+}
+
+.logo{
+  font-family:'Black Ops One',cursive;
+}
+
+.text-primary{
+  color:white;
+  font-size:4vw
+}
+
+.wrapper{
+  position:relative;  
+}
+
+.board{
+  position:absolute;
+  z-index:0;
+ 
+}
+
+.positioning{  
+  top:0;
+  left:0;
+  margin:3vh auto;
+  width:90vw;
+  height:90vw;    
+}
+
+.square{
+  width:30vw;
+  height:30vw;  
+}
+
+.active:hover{
+  background-color:#DDDDDD;
+
+}
+
+.choice{
+  position:absolute;
+  background-color:transparent;
+  border: 3px solid #aaddaa;
+  width:40%;
+  border-radius:10px;
+  padding:5px;
+  top:45%;
+  left:30%;
+}
+
+.choice>p{
+  color: #DDDDDD;
+}
+.choice>button{
+  background-color:#DDDDDD;
+  text-decoration:bold;
+  color:black;
+  font-size:20px;
+}
+
+.choice>button:hover{
+  background-color:#DDDDDD;
+  color:white;
+}
+
+.gameOver{
+  position:absolute;
+  background-color:#FFF;
+  border: 3px solid #aaddaa;
+  width:40%;
+  border-radius:10px;
+  padding:5px;
+  top:45%;
+  left:30%;
+}
+
+.message{
+  color:#555555;
+}
+
+@media only screen and (min-width:479px){
+  .positioning{
+    width:450px;
+    height:450px;
+  }
+  
+  .square{
+    width: 150px;
+    height: 150px;
+  }
+}

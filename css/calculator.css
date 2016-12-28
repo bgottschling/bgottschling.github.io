@@ -1,0 +1,78 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  font-family: "Helvetica";
+}
+#case {
+  height: 400px;
+  width: 100%;
+  background-color: gray;
+}
+#screen {
+  height: 174px;
+  width: 100%;
+  background-color: #fbfbfb;
+}
+#digits {
+  float: right;
+  margin-top: 3%;
+  margin-right:7%;
+  font-size: 4.5em;
+  color: #6d6d6d;
+}
+#equal {
+  background-color: #1ba1fe;
+  color: white;
+}
+.operation {
+  background-color: #e3e3e3;
+}
+button {
+  height: 85px;
+  width: 25%;
+  font-size: 1.85em;
+  background-color: #f2f2f2;
+  color: #5d5d5d;
+  margin-left: 0px;
+  margin-right: 0px;
+  float: left;
+}
+@media screen and (min-device-width: 800px) {
+  #case {
+    height: 400px;
+    width: 25%;
+    border: 4px solid #1e1d1d;
+    border-radius: 1%;
+    margin-left: 20%;
+    margin-top: 5%;
+
+  }
+  #screen {
+    width: 100%;
+    text-align: right;
+    height: 100px;
+    border-radius: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #616161;
+    text-overflow: ellipsis;
+  }
+  #digits {
+    float: right;
+    font-size: 2em;
+    color: #f2f2f2;
+  }
+    button {
+    height: 60px;
+    font-size: 1em;
+  }
+  .operation {
+     background-color: #f2f2f2;
+   }
+  #equal {
+    background-color: #f2f2f2;
+    color: #5d5d5d;
+  }
+}

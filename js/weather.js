@@ -62,9 +62,10 @@ var $windText = $("#wind-text");
 }
   //This calls the api with the correct coordinates provided by the getLocation function
   function getWeather(locdata) {
+    console.log("getWeather has been called.")
     var lat = locdata.lat;
     var lon = locdata.lon;
-    var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=06170c100199dbae1e223cc3dfad960b";
+    var apiURI = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=6c788c55fe75c1f415d3cfdc814d0218";
 
     if (locdata){ 
       console.log("success");
